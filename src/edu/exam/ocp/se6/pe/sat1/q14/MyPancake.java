@@ -9,7 +9,8 @@ public class MyPancake implements Pancake {
         y.add("1");
         System.out.println(x);
     }
-    List<String> doStuff(List<String> z) {
+    //List<String> doStuff(List<String> z) {  //compile error, need public access modifier
+    public List<String> doStuff(List<String> z) {
         z.add("9");
         return z;
     }
