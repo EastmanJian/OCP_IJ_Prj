@@ -2,7 +2,6 @@ package edu.exam.ocp.se6.sg.chapter7.generic.wildcast;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
