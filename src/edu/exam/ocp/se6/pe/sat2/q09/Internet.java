@@ -1,4 +1,4 @@
-package edu.exam.ocp.se6.pe.sat2.q08;
+package edu.exam.ocp.se6.pe.sat2.q09;
 
 public class Internet {
     private int y = 8;
