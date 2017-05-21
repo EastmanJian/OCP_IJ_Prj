@@ -1,22 +1,22 @@
 package edu.exam.ocp.se6.pe.sat2.q13;
 
-public class SafeDeposit {
-    private static SafeDeposit singleton;
+public class SafeDepositSync {
+    private static SafeDepositSync singleton;
     private int code;
 
-    public static SafeDeposit getInstance(int code) {
+    public static synchronized SafeDepositSync getInstance(int code) {
         if (singleton == null) {
             try {
                 Thread.sleep(500); //add delay for easier simulate multi-thread case
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            singleton = new SafeDeposit(code);
+            singleton = new SafeDepositSync(code);
         }
         return singleton;
     }
 
-    private SafeDeposit(int c) {
+    private SafeDepositSync(int c) {
         code = c;
     }
 
