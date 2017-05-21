@@ -1,1 +1,1 @@
-# Java demo codes of OCP
+# Java demo codes of OCP.
