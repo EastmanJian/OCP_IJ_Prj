@@ -7,7 +7,7 @@ public class Outer {
     private String greeting;
 
     protected class Inner {
-        public int repeat = 3;
+        private int repeat = 3;
 
         public void go() {
             for (int i = 1; i <= repeat; i++) {

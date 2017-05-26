@@ -22,3 +22,16 @@ public class One extends Zero {
     static {  System.out.println("One: 2nd static {}"); }
 }
 
+/* ->
+Zero: static {}
+One: 1st static {}
+One: 2nd static {}
+One: Main() Start
+Zero: {}
+Zero: Constructor
+One: 1st {}
+One: 2nd {}
+One: Constructor
+One: Main() End
+
+ */

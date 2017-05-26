@@ -3,7 +3,7 @@ package edu.exam.ocp.se6.sg.chapter2.nested.member;
 /**
  * Member Inner Class example
  *
- * special syntax for accessing a field in the outer class that you need to use if the outer class has a same name
+ * Special syntax for accessing a field in the outer class that you need to use if the outer class has a same name
  * with a field or method as the inner class.
  */
 public class A {
