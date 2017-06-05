@@ -9,14 +9,14 @@ public class Gazillion {
         System.out.println("-------------");
         System.out.println(nf.getMaximumFractionDigits());
         nf.setMaximumFractionDigits(2);
-//        System.out.println(nf.format(s)); //IllegalArgumentException: Cannot format given Object as a Number
+//        System.out.println(nf.format(s)); //Runtime Exception: IllegalArgumentException: Cannot format given Object as a Number
         System.out.println(nf.format(456.7890123)); // -> 456.79
 
         //Tests
         System.out.println("------Tests-------");
         System.out.println(nf.parse("789qwer")); // -> 789
-//        System.out.println(nf.parse("abc987"));  //Runtime error: ParseException: Unparseable number: "abc987".
-//        System.out.println(nf.parse("abc"));  //ParseException: Unparseable number: "abc"
+//        System.out.println(nf.parse("abc987"));  //Runtime Exception: ParseException: Unparseable number: "abc987".
+//        System.out.println(nf.parse("abc"));  //Runtime Exception: ParseException: Unparseable number: "abc"
 
     }
 }

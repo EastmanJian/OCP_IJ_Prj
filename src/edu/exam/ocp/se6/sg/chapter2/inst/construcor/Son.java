@@ -9,7 +9,7 @@ public class Son extends Father {
 //        System.out.println("Son parameter constructor - int");
 //    }
 
-    public Son(boolean b) { //OK
+    public Son(int x) { //OK
         super("str");
         System.out.println("Son parameter constructor - int");
     }

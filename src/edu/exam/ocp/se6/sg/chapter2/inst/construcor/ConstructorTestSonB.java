@@ -4,6 +4,7 @@ public class ConstructorTestSonB extends ConstructorTestFather {
     ConstructorTestSonB () {
         System.out.println("SonB default constructor");
     }
+
     public ConstructorTestSonB (String s) {
         System.out.println("SonB parameter constructor");
     }
