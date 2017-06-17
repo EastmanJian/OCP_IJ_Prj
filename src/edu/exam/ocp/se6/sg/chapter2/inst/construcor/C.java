@@ -7,8 +7,9 @@ package edu.exam.ocp.se6.sg.chapter2.inst.construcor;
  * constructor is not explicitly invoke parrent's constructor.
  */
 class C extends P {
-//    public C(String s){} //Compile error: cannot find symbol symbol: class P
+//    public C(String s) {} //Compile error: constructor P in class P cannot be applied to given types
     public C(String s) {
-        super(s);
+//        System.out.println("this()or super() must be the first statement in constructor body.");
+        super(s); //Compile Error if this is not the first statement: call to super must be first statement in constructor
     }
 }

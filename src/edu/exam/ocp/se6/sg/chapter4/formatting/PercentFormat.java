@@ -6,14 +6,14 @@ import java.util.Locale;
 /**
  * Example of NumberFormat.format()
  */
-public class GermanNumber {
+public class PercentFormat {
     public static void main(String[] args) {
-        NumberFormat nf = NumberFormat.getInstance(Locale.GERMAN);
-        double d = 123.57;
-        System.out.println(nf.format(d));
+        NumberFormat pf = NumberFormat.getPercentInstance();
+        double p = 0.47;
+        System.out.println(pf.format(p));
     }
 }
 
 /* ->
-123,57
+47%
 */
