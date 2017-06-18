@@ -9,7 +9,8 @@ public class StackTest {
     public static void main(String[] args) {
         Stack<Integer> mystack = new Stack<>();
         mystack.push(new Integer(100));
-        mystack.push(200);
+        mystack.push(null); //Stack allows null elements
+        mystack.push(200); //autoboxing
 //        mystack.push("Not an Integer"); //Compile Error: incompatible types: java.lang.String cannot be converted to java.lang.Integer
         Integer top = mystack.pop();
         for(Integer i : mystack) {
@@ -20,4 +21,5 @@ public class StackTest {
 
 /* ->
 100
+null
 */

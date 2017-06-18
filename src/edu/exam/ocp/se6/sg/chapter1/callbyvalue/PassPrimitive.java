@@ -1,8 +1,8 @@
 package edu.exam.ocp.se6.sg.chapter1.callbyvalue;
 
 /**
- * If the argument passed into a method parameter is a primitive type, it is impossible in Java for the method to alter
- * the value of the original primitive.
+ * If the argument passed into a method parameter is a sort type, it is impossible in Java for the method to alter
+ * the value of the original sort.
  */
 
 public class PassPrimitive {

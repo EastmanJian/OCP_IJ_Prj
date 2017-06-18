@@ -1,7 +1,7 @@
 package edu.exam.ocp.se6.sg.chapter3.switchcase;
 
 /**
- * The constant_expression is a switch statement cannot be a reference or a primitive variable.
+ * The constant_expression is a switch statement cannot be a reference or a sort variable.
  */
 public class MustConstant {
     public static void main(String[] args) {

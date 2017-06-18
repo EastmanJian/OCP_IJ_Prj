@@ -12,6 +12,7 @@ public class UsingTreeSet {
         for (int i = 1; i <= 20; i++) {
             tree.add(i);
         }
+//        tree.add(null); //NullPointerException at runtime
         Integer ceiling = tree.ceiling(10);
         System.out.println("ceiling of 10 = " + ceiling);
         Integer higher = tree.higher(10);
