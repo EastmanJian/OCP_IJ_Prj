@@ -50,5 +50,10 @@ public class PrimitiveTest {
 //        bl = c; // Compile Error: incompatible types: char cannot be converted to boolean
 //        c = bl; // Compile Error: incompatible types: boolean cannot be converted to char
 //        d = bl; // Compile Error: incompatible types: boolean cannot be converted to double
+
+        //casting
+        i = (int)d;
+        i = (int)f;
+
     }
 }

@@ -19,6 +19,7 @@ class LinkedBlocking {
         System.out.print(toDo.size() + " " + toDo.poll());
         System.out.print(" " + toDo.peek() + " " + toDo.poll());
         System.out.println(" " + toDo.poll() + " " + toDo.poll());
+//        toDo.add(null); //not allows null elements, NullPointerException at runtime
     }
 }
 
