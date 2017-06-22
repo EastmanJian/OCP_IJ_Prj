@@ -15,6 +15,14 @@ public class ArrayToList {
 
         System.out.println();
 
+        //alters the array alters the list
+        array[1] = "five";
+        for (String s : list) {
+            System.out.print(s + " ");
+        }
+
+        System.out.println();
+
         //using variable-length arguments
         List<Integer> numbers = Arrays.asList(8, 6, 7, 5, 3, 0, 9);
         for (int i : numbers) { //auto unboxing
@@ -25,5 +33,6 @@ public class ArrayToList {
 
 /* ->
 one four three
+one five three
 8 6 7 5 3 0 9
 */

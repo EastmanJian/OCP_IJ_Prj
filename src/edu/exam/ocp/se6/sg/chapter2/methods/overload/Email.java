@@ -22,7 +22,7 @@ public class Email {
     public static void main(String [] args) {
         Email email = new Email();
         email.send(12.5);  //12.5 is double, autobox into Double, it's a child object of Object, hence send(Object x) is invoked. If there is a method send(double d), it will be invoked instead of send(Object x)
-        email.send(23.6f); //if there is send(double d) instead of send(float f), send(double d) will be invoked instead of send(Object x), because widening has higher priority of autoboxing.
+        email.send(23.6f); //if there is send(double d) instead of send(float f), send(double d) will be invoked instead of send(Object x), because widening has higher precedence of autoboxing.
         email.send(123456);
         email.send(new String("Hello"));
         email.send(new java.util.Date());
