@@ -1,10 +1,10 @@
 package edu.exam.ocp.se6.pe.sat1.q02;
 
-public class TestFather {
+public class Boy extends Father {
     public static void main(String[] args) {
-        Father f = new Father();
-        f.noModifier();
-        f.protectedModifier();
+        Boy b = new Boy();
+        b.noModifier();
+        b.protectedModifier();
     }
 }
 /* ->

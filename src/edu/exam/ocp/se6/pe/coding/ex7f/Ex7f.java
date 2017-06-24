@@ -3,13 +3,16 @@ package edu.exam.ocp.se6.pe.coding.ex7f;
 import java.util.Properties;
 
 /**
- * Properties
+ * Properties and System Properties example.
+ * Write a program that adds two name-value pairs to java.util.Properties: one pair via a command-line option and
+ * one via a method in Properties. Next, print all the system’s properties to verify that the two new properties
+ * were added.
+ * Run with java edu.exam.ocp.se6.pe.coding.ex7f.Ex7f -DmyHouse=Lido *
  */
 public class Ex7f {
     public static void main(String[] args) {
         Properties p = System.getProperties();
         p.setProperty("First Name", "Eastman");
-        p.setProperty("Last Name", "Kan");
         for (String key : p.stringPropertyNames()) {
             System.out.println(key + " : " + p.getProperty(key));
         }
@@ -44,10 +47,10 @@ user.variant :
 os.name : Windows 10
 sun.jnu.encoding : GBK
 java.library.path : C:\Program Files (x86)\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Shortcuts;C:\Program Files (x86)\IBM\SDP\jdk\bin;C:\adb;C:\Program Files (x86)\Lua\5.1;C:\Program Files (x86)\Lua\5.1\clibs;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\QuickTime Alternative\QTSystem;C:\Users\jiany\AppData\Local\Microsoft\WindowsApps;;.
+myHouse : Lido
 java.specification.name : Java Platform API Specification
 java.class.version : 52.0
 sun.management.compiler : HotSpot Client Compiler
-Last Name : Kan
 os.version : 10.0
 user.home : C:\Users\jiany
 user.timezone :

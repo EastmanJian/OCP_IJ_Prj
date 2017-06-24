@@ -5,15 +5,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Each time the program runs, the characters.txt file is written from the beginning. (It is truncated before write)
+ * Use FileWriter("file", true) to append text to a file. Chained with PrinterWriter.
+ * (This is out of SG book)
  */
-public class PrintWriterDemo {
+public class FileWriterAppend {
     public static void main(String[] args) throws IOException {
         int i = 101;
         double d = 1.0 / 3.0;
         StringBuilder s = new StringBuilder("hello");
         boolean b = true;
-        FileWriter fw = new FileWriter("characters.txt");
+        FileWriter fw = new FileWriter("characters.txt", true);
         PrintWriter out = new PrintWriter(fw);
         out.print(i);
         out.println(d);
@@ -23,7 +24,10 @@ public class PrintWriterDemo {
         fw.close();
     }
 }
-/* inside characters.txt ->
+/* run twice, inside characters.txt ->
+1010.3333333333333333
+hello
+true
 1010.3333333333333333
 hello
 true

@@ -5,7 +5,7 @@ public class Gazillion {
     public static void main(String[] args) throws Exception {
         String s = "123.45678xyz";
         NumberFormat nf = NumberFormat.getInstance();
-        System.out.println(nf.parse(s));  // -> 123.456
+        System.out.println(nf.parse(s));  // -> 123.45678
         System.out.println("-------------");
         System.out.println(nf.getMaximumFractionDigits());
         nf.setMaximumFractionDigits(2);
