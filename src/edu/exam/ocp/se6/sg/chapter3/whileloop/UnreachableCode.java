@@ -15,11 +15,15 @@ public class UnreachableCode {
 
         boolean b = true;
         while(b = false) {
-            System.out.println("Not here.");
+            System.out.println("Not here."); //compiles fine.
+        }
+
+        while(b) {
+            System.out.println("Not here."); //compiles fine.
         }
 
         if(false) {
-            System.out.println("Unreachable");
+            System.out.println("Unreachable"); //compiles fine.
         }
     }
 }
