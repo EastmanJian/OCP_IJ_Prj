@@ -1,19 +1,18 @@
 package edu.exam.ocp.se6.sg.chapter7.generic.bounded;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Stack;
+import java.io.*;
 
-public class Hello<T extends List> {
+public class Hello<T extends IOException> {
+    private T hello;
+    public Hello() { hello = null;}
     public static void main(String[] args) {
-        Hello<ArrayList> h1 = new Hello<ArrayList>();
-        Hello<Stack> h2 = new Hello<Stack>();
-//        Hello<HashMap> h3 = new Hello<HashMap>();
+        Hello<FileNotFoundException> h1 = new Hello<FileNotFoundException>();
+        Hello<IOException> h2 = new Hello<>();
+//        Hello<Exception> h3 = new Hello<Exception>(); //Compile Error: type argument Exception is not within bounds of type-variable T
+        Hello<FileNotFoundException> h4 = new Hello(); //compiles ok with warning: unchecked assignment
+        Hello h5 = new Hello<IOException>(); //compiles ok with warning: found raw type
+//        Hello<IOException> h7 = new Hello<FileNotFoundException>(); //Compile Error : incompatible types
+//        Hello<FileNotFoundException> h7 = new Hello<InterruptedIOException>(); //Compile Error : incompatible types
     }
 }
 
-/*
-Compile output:
-Error:(12) java: type argument java.util.HashMap is not within bounds of type-variable T
- */

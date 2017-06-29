@@ -13,7 +13,9 @@ public class HouseTest {
         one.getKitchen();
         two.getKitchen();
         one.getKitchen();
-        System.out.println("counter = " + House.counter); // -> counter = 3
-        System.out.println("aSharedRoom = " + House.aSharedRoom); // -> null
+        System.out.println("counter = " + House.counter); // access static field using class name -> counter = 3
+        System.out.println("counter = " + one.counter); // access static field using reference -> counter = 3
+        System.out.println("counter = " + two.counter); // -> counter = 3
+        System.out.println("aSharedRoom = " + House.aSharedRoom); // -> aSharedRoom = null
     }
 }

@@ -1,6 +1,6 @@
 package edu.exam.ocp.se6.sg.chapter1.packages;
 /**
- * Example of using wildcard in import statements
+ * Example of using wildcard in imp statements
  */
 
 import java.io.*;
