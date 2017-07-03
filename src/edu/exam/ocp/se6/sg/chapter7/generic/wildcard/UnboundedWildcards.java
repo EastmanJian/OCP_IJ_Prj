@@ -1,11 +1,11 @@
-package edu.exam.ocp.se6.sg.chapter7.generic.wildcast;
+package edu.exam.ocp.se6.sg.chapter7.generic.wildcard;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UnboundedWildcardsTest {
-    public static <T> void printList(List<T> list) {
-        for (T x : list) {
+public class UnboundedWildcards {
+    public static void printList(List<?> list) {  //same as 'printList(List list)'
+        for (Object x : list) {
             System.out.println(x.toString());
         }
     }
@@ -17,6 +17,9 @@ public class UnboundedWildcardsTest {
         keywords.add("collections");
         printList(keywords);
     }
-
-
 }
+/* ->
+java
+generics
+collections
+*/

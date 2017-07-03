@@ -1,6 +1,5 @@
-package edu.exam.ocp.se6.sg.chapter7.generic.wildcast;
+package edu.exam.ocp.se6.sg.chapter7.generic.wildcard;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 

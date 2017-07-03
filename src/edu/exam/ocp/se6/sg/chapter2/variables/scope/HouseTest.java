@@ -8,6 +8,7 @@ package edu.exam.ocp.se6.sg.chapter2.variables.scope;
 public class HouseTest {
     public static void main(String [] args) {
         System.out.println("counter = " + House.counter); // -> counter = 0
+        System.out.println("isWood = " + House.isWood); // -> isWood = false
         House one = new House();
         House two = new House();
         one.getKitchen();

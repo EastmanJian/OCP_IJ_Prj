@@ -13,15 +13,18 @@ public class Q09 {
 
 
         x = 3;
-        System.out.println(x++);
-        System.out.println(x);
+        System.out.println(x++); // -> 3
+        System.out.println(x); // -> 4
 
         x = 3;
         x = x++;
-        System.out.println(x); // -> 3.
+        System.out.println(x); // -> 3
                                // Because "x++" is evaluated as 3 first in the expression.
                                // Then x is self increased to 4.
                                // After that, expression 3 is assigned back to x.
 
+        x = 3;
+        x = ++x;
+        System.out.println(x); // -> 4
     }
 }

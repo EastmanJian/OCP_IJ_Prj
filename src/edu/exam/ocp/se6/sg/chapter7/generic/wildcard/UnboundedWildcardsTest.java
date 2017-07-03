@@ -1,11 +1,11 @@
-package edu.exam.ocp.se6.sg.chapter7.generic.wildcast;
+package edu.exam.ocp.se6.sg.chapter7.generic.wildcard;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UnboundedWildcards {
-    public static void printList(List<?> list) {  //same as 'printList(List list)'
-        for (Object x : list) {
+public class UnboundedWildcardsTest {
+    public static <T> void printList(List<T> list) {
+        for (T x : list) {
             System.out.println(x.toString());
         }
     }

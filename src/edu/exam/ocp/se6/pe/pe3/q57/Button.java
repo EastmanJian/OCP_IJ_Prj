@@ -11,6 +11,9 @@ public class Button extends GuiThing {
         GuiThing g = new GuiThing();
         this.doStuff(); // -> button
         super.doStuff(); // -> gui
+        Button.super.doStuff();  // -> gui
+        Button.this.doStuff(); // -> button
+//        GuiThing.this.doStuff(); //compile error
 //        this.super.doStuff(); //compile error
 //        g.super.doStuff();  //compile error
 //        super.this.doStuff(); //compile error

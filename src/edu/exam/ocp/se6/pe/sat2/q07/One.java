@@ -13,9 +13,7 @@ public class One extends Zero {
         System.out.println("One: Main() End");
     }
 
-    One () {
-        System.out.println("One: Constructor");
-    }
+    One () { System.out.println("One: Constructor"); }
 
     { System.out.println("One: 2nd {}"); }
 
@@ -33,5 +31,4 @@ One: 1st {}
 One: 2nd {}
 One: Constructor
 One: Main() End
-
- */
+*/

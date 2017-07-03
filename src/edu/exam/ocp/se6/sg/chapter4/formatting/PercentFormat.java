@@ -5,15 +5,15 @@ import java.util.Locale;
 
 /**
  * Example of NumberFormat.format()
+ * Note that the decimal points will be rounded.
  */
 public class PercentFormat {
     public static void main(String[] args) {
         NumberFormat pf = NumberFormat.getPercentInstance();
         double p = 0.47;
-        System.out.println(pf.format(p));
+        System.out.println(pf.format(p)); // -> 47%
+
+        p = 3.1415;
+        System.out.println(pf.format(p)); // -> 314%
     }
 }
-
-/* ->
-47%
-*/

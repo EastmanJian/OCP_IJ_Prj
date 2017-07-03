@@ -3,7 +3,8 @@ package edu.exam.ocp.se6.pe.pe1.q59;
 import java.util.ArrayList;
 
 /**
- *
+ * ArrayList.removeRange() is a protected method.
+ * It can be accessed by MyUtil because MyUtil inherits ArrayList.
  */
 
 public class MyUtil extends ArrayList {

@@ -1,4 +1,4 @@
-package edu.exam.ocp.se6.sg.chapter7.generic.wildcast;
+package edu.exam.ocp.se6.sg.chapter7.generic.wildcard;
 
 import java.util.ArrayList;
 
@@ -6,19 +6,27 @@ import java.util.ArrayList;
 
 public class UpperBoundWildcardsTest {
     public static void main(String[] args) {
-        ArrayList<? extends Number> list = new ArrayList<>();
+        ArrayList<? extends Number> list = new ArrayList<Number>();
         Number n1 = new Integer(12);
         Integer n2 = new Integer (23);
         Double n3= new Double (34.56);
-//        list.add(n1);
-//        list.add(n2);
-//        list.add(n3);
+//        list.add(n1); //compile error
+//        list.add(n2); //compile error
+//        list.add(n3); //compile error
         list.add(null);
+
+        ArrayList<Number> numberList = new ArrayList<Number>();
+        numberList.add(n1);
+        numberList.add(n2);
+        numberList.add(n3);
+        list = numberList;
+
+        testAdd(list);
     }
 
-    public void testAdd(ArrayList<? extends Number> list){
-//        list.add(new Integer(67));
-//        list.add(new Double(78.9));
+    public static void testAdd(ArrayList<? extends Number> list){
+//        list.add(new Integer(67)); //compile error
+//        list.add(new Double(78.9)); //compile error
         for (Number n : list ) {
             System.out.println(n);
         }
@@ -38,10 +46,10 @@ Line 14: Compile Error: no suitable method found for add(java.lang.Integer)
 Line 15: Compile Error: no suitable method found for add(java.lang.Double)
     method java.util.ArrayList.add(capture#1 of ? extends java.lang.Number) is not applicable
     (argument mismatch; java.lang.Double cannot be converted to capture#1 of ? extends java.lang.Number)
-Line 20: Compile Error: no suitable method found for add(java.lang.Integer)
+Line 28: Compile Error: no suitable method found for add(java.lang.Integer)
     method java.util.ArrayList.add(capture#1 of ? extends java.lang.Number) is not applicable
     (argument mismatch; java.lang.Integer cannot be converted to capture#1 of ? extends java.lang.Number)
-Line 21: Compile Error: no suitable method found for add(java.lang.Double)
+Line 29: Compile Error: no suitable method found for add(java.lang.Double)
     method java.util.ArrayList.add(capture#1 of ? extends java.lang.Number) is not applicable
     (argument mismatch; java.lang.Double cannot be converted to capture#1 of ? extends java.lang.Number)
 */

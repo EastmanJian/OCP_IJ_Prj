@@ -27,7 +27,7 @@ public class PrimitiveTest {
         f = b;
         f = s;
         f = i;
-        f = l; //note this: long is 64 bits, bit it can be converted to float which is 32bits
+        f = l; //note this: Though long is 64 bits and float is 32 bit, long can be widen to float because the range of float is larger.
         l = i;
         l = b;
         l = c;
@@ -35,7 +35,7 @@ public class PrimitiveTest {
         d = l;
         d = c;
 
-        //incompatible types conversion
+//incompatible types conversion
 //        i = f;  //Compile Error: incompatible types: possible lossy conversion from float to int
 //        l = f;  //Compile Error: incompatible types: possible lossy conversion from float to long
 //        i = l;  //Compile Error: incompatible types: possible lossy conversion from long to int

@@ -22,5 +22,9 @@ public class AnonInner {
         new AnonInner().printX();
     }
 }
-
-
+/* ->
+x = 10
+x = 10
+x = 10
+...
+*/

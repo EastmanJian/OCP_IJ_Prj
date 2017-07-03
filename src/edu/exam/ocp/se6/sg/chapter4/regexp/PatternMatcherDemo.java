@@ -96,10 +96,10 @@ public class PatternMatcherDemo {
 
         String s = "[A-Z]\\w*\\s+[A-Z]\\w+";
         Pattern x = Pattern.compile(s);
-        String [] names = {"John Doe", "JohnDoe", "John\tDoe", "John doe", "J D", "J D5"};
-        for(String name: names) {
+        String[] names = {"John Doe", "JohnDoe", "John\tDoe", "John doe", "J D", "J D5"};
+        for (String name : names) {
             Matcher m = x.matcher(name);
-            if(m.matches()) {
+            if (m.matches()) {
                 System.out.println(name + " matches " + s);
             }
         }
@@ -109,6 +109,18 @@ public class PatternMatcherDemo {
         J D5 matches [A-Z]\w*\s+[A-Z]\w+
         */
 
+        Pattern patt = Pattern.compile("(\\d[a-z])+\\s\\w?");
+        String[] va = {"9a4b x", "3a z", "a", "1a2b3c "};
+        for (String value : va) {
+            if (patt.matcher(value).matches()) {
+                System.out.println(value); // ->
+            }
+        }
+        /* ->
+        9a4b x
+        3a z
+        1a2b3c
+        */
     }
 }
 
