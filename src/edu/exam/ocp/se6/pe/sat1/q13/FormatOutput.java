@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class FormatOutput {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         boolean b = false;
         int i = 7;
         double d = 1.23;
@@ -34,5 +34,7 @@ public class FormatOutput {
         String intro = "d1 = ";
         out.format("%s%7.3f", intro, d1); // -> d1 =   0.333
         out.flush();
+        Thread.sleep(3000); //sleep here to check the effect of you do not flush
+        out.close();  //The close() method will invoke flush() before closing the stream.
     }
 }

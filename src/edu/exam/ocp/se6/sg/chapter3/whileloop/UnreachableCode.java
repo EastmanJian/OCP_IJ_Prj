@@ -25,5 +25,14 @@ public class UnreachableCode {
         if(false) {
             System.out.println("Unreachable"); //compiles fine.
         }
+
+        if (true) throw new NullPointerException();
+        System.out.println("Unreachable");  //compiles fine
+
+/*
+        throw new NullPointerException();
+        System.out.println("Unreachable");  //Compile Error: unreachable statement
+*/
+
     }
 }

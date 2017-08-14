@@ -10,7 +10,9 @@ public class Salt {
         doStuff(s1); // -> 2 0 1 0 1 false
         System.out.println();
 
+
         Set<Number> s = s1; //same as "Set<Number> s = (Set<Number>)s1;"
+        s.add(7);
         for (Number n : s) {
             System.out.println(n); //runtime ClassCastException: String cannot be cast to Number.
         }

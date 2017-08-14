@@ -3,8 +3,11 @@ package edu.exam.ocp.se6.sg.chapter2.review.q05;
 public class Television {
     private int channel = setChannel(7); //explicit initialization
     private String brand = "Konka"; //explicit initialization
+    private int count = 5;
+    private int buttons = count;
 
     { setChannel(9); } //instance initializer call an instance method
+//    static { setChannel(9); } //compile error: static initializer cannot call an instance method
 
     public Television(int channel) {
         this.channel = channel; //reassign the field value

@@ -7,5 +7,7 @@ public class WrapperOpsDemo {
         i = j % i;
         i--;
         System.out.println("i=" + i); // -> i=2
+        int x = i * j;
+        System.out.println("x=" + x); // -> x=66
     }
 }

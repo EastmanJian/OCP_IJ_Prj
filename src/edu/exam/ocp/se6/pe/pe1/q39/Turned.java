@@ -1,23 +1,23 @@
 package edu.exam.ocp.se6.pe.pe1.q39;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
- * If you use Comparable binarySearch, the array should be sorted using Comparable or Comparator with the same ordering.
- * If you only sort the array by Comparator with a different ordering but use Comparable binarySearch, the result might
- * be undefined (negative number).
+ * If you use Comparator binarySearch, the array should be sorted using Comparator or Comparable with the same ordering.
+ * If you use Comparator binarySearch with a different ordering, the result might be undefined (negative number).
  */
-public class Unturned {
+public class Turned {
     public static void main(String[] args) {
         String[] towns = {"aspen", "vail", "t-ride", "dillon"};
-        MySort ms = new MySort();
-        Arrays.sort(towns, ms);
+        Arrays.sort(towns);
         for (String s: towns) {
             System.out.print(s + " ");
         }
         System.out.println();
-        System.out.println(Arrays.binarySearch(towns, "dillon"));
-        System.out.println(Arrays.binarySearch(towns, "dillon", ms));
+
+        MySort ms = new MySort();
+        System.out.println(Arrays.binarySearch(towns, "t-ride", ms));
     }
 
     static class MySort implements Comparator<String> {
@@ -29,13 +29,11 @@ public class Unturned {
 }
 
 /* reverse order in Comparator ->
-vail t-ride dillon aspen
+aspen dillon t-ride vail
 -1
-2
 */
 
 /* The Comparator uses the same order as Comparable ->
 aspen dillon t-ride vail
-1
-1
+2
 */

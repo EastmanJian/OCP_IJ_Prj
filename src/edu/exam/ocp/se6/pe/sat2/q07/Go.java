@@ -7,11 +7,14 @@ public class Go extends Game {
         new Go();
         System.out.println(s);
     }
-    Go() { super("s2 "); }
-
+    Go() {
+        super("cc ");
+        s += s2; //you can refer to s2 after super constructor is invoked.
+    }
     static { s += "sb "; }
+    public void aMethod() { s2 = "anything"; } //valid
 }
 
 /* ->
--sb s2 i
+-sb cc s2 YYS i s2
 */

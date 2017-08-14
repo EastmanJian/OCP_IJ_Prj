@@ -54,6 +54,8 @@ public class PrimitiveTest {
         //casting
         i = (int)d;
         i = (int)f;
+        c = (char)s;
+        s = (short)c;
 
     }
 }
