@@ -27,6 +27,7 @@ public class DateTimeCalendarDemo {
         Date d1 = new Date(); //current timestamp
         Date d2 = d1;
         System.out.println(d1); // sample output -> Sun Jun 25 16:05:46 CST 2017
+        System.out.println(d1.getTime()); // sample output -> 1513246350761
         d2.setTime(d1.getTime() + (7 * 24 * 60 * 60 * 1000));
         System.out.println(d2); // sample output -> Sun Jul 02 16:05:46 CST 2017
 
