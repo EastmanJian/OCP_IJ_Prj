@@ -4,7 +4,6 @@ package edu.exam.ocp.se6.pe.pe1.q21;
  * Example of File.list()
  * It returns an array of strings naming the files and directories in the directory denoted by The File object.
  */
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
